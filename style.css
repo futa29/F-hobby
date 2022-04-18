@@ -1,0 +1,39 @@
+a{
+    color: rgba(0, 0, 0, 0.956);
+    text-decoration: none;
+}
+span{
+    /* マウスを当てた時　ホバー */
+     cursor: pointer;
+}
+span:hover{
+    opacity: 0.5;
+}
+
+.blook{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 1px solid;
+    background-color:aqua;
+    /* 要素に影をつける左右の向き、上下の向き、ぼかし、広がり */
+    box-shadow: 10px 10px 15px -10px;
+
+}
+p.test{
+    /* 文字だけに指定したい場合は下記記述 */
+    display: inline;
+    /* ボーダー線の位置決める */
+    padding-bottom: 0.2em;
+    border-bottom: dotted 2px;
+}
+p.middle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+textarea::placeholder,input::placeholder{
+    color: brown;
+}
