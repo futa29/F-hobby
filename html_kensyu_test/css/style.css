@@ -1,0 +1,483 @@
+@charset "UTf-8";
+
+html {
+    /* フォントサイズを１００％に設定しておくことでユーザがブラウザで指定したフォントサイズが正しく反映される */
+    font-size: 100%;
+    width: 100vw;
+    
+}
+
+body {
+    width: 100vw;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+li {
+    list-style: none;
+}
+
+img {
+    /* 画像が画面の横幅からはみ出るのを防ぐためにmaxサイズを設定 */
+    max-width: 100%;
+    
+}
+
+
+/* header start*/
+#header {
+    width: auto;
+    display: flex;
+    box-sizing: border-box;
+    /* 両端に揃える */
+    /* justify-content: space-between; */
+    align-items: center;
+    
+}
+#header .logo {
+    margin-left: 20px;
+}
+#header ul {
+    display: flex;
+    
+}
+
+#header li {
+    margin-left: 40px;
+    
+}
+#header .inquiry {
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 91px;
+    width: 151px;
+    margin-left: auto;
+}
+#header .inquiry:hover {
+    opacity: 0.8;
+}
+#header .inquiry p {
+    margin-top:33px;
+}
+@media screen and (max-width: 900px) {
+    /*-------------------------------------------
+    header
+    -------------------------------------------*/
+    #header .inquiry {
+        display: none
+    }
+    #header {
+    display: block;
+    width: auto;
+    }
+    #header ul {
+        display: flex;
+        padding-left: 0px;
+    }
+    #header li {
+        margin: 0;
+        padding-left: 15px;
+        font-size: 15px;
+    }
+}
+
+/* header end*/
+
+/* mainvisual start */
+.mainvisual img {
+    height: 50%;
+    
+}
+
+/* mainvisual end */
+
+/* news start*/
+#news {
+    margin-top: 60px;
+    margin-left: 15%;
+}
+
+#news ul {
+    display: flex;
+    margin-right: 100px;
+    padding: 0;
+}
+
+
+#news .line {
+    text-decoration: underline 2px; 
+}
+#news .main h1 {
+    margin-bottom: 0px;
+    font-size: 44px;
+    font-weight: 20;
+    letter-spacing: 0.3em;
+}
+#news .main p {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+#news .list1 {
+    border-right: 2px solid black ;
+    padding-right: 5%;
+}
+#news .list2 {
+    border-right: 2px solid black ;
+    padding-left: 3%;
+    padding-right: 5%;
+}
+#news .list3 {
+    padding-left: 3%;
+    padding-right: 3%;
+}
+#news .list1 li {
+    display: flex;
+    align-items: center;
+}
+#news .list2 li {
+    align-items: center;
+    display: flex;
+}
+#news .list3 li {
+    align-items: center;
+    display: flex;
+}
+#news .contents {
+    display: flex;
+    align-items: center;
+}
+#news .news {
+    padding: 0 3px 0px 3px;
+    margin-left: 30px;
+    height: 24px;
+    background-color: black;
+    color: white;
+}
+#news .news p {
+    margin: 0;
+}
+
+@media screen and (max-width: 900px) {
+    /*-------------------------------------------
+    news
+    -------------------------------------------*/
+    #news {
+        margin-left: 3%;
+    }
+    #news ul {
+        flex-direction: column;
+        
+    }
+    #news .list1 {
+        border-right: none;
+    }
+    
+    #news .list2 {
+        border-right: none;
+        padding: 0;
+    }
+    #news .list3 {
+        padding: 0;
+    }
+    
+}
+
+/* news end*/
+
+
+/* about start*/
+#about img {
+    width: 100;
+}
+#about .parent {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    margin-top: 10%;
+}
+#about .text h1 {
+    margin-bottom: 0px;
+    font-size: 44px;
+    font-weight: 20;
+    letter-spacing: 0.3em;
+}
+#about .text p {
+    margin: 0;
+}
+#about .image {
+    position: absolute;
+    width: calc(100% /2);
+    height: auto;
+}
+#about .text {
+    width: calc(100% - 56%);
+    height: auto;
+    /* background-color: aliceblue; */
+    position: absolute;
+    top: 20%;
+    left: calc(100% - 45%);
+    
+}
+#about .line {
+    text-decoration: underline 2px;
+}
+#about .textarea {
+    margin-top: 7%;
+}
+@media screen and (max-width: 900px) {
+    /*-------------------------------------------
+    about　　image等のポジションを通常に戻し、縦並びに変更
+    -------------------------------------------*/
+    #about .parent {
+        position: static;
+        display: inline-block;
+        flex-direction: column;
+        height: auto;
+    }
+    #about .image {
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+    #about .text {
+        position: static;
+        width: 90%;
+        height: auto;
+        margin-left: 3%;
+    }
+    #about .text h1 {
+        margin-top: 0;
+    }
+    #about .textarea {
+        margin-top: 3%;
+    }
+}
+/* about end*/
+
+/* business start*/
+#business .main h1 {
+    margin-top: 10%;
+    margin-bottom: 0px;
+    font-size: 44px;
+    font-weight: 20;
+    letter-spacing: 0.3em;
+}
+#business .main {
+    margin-left: 15%;
+}
+#business .text p {
+    margin: 0;
+}
+#business .line {
+    text-decoration: underline 2px;
+}
+#business .parent {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+#business .img {
+    height: auto;
+}
+#business .image1 {
+    width: 30%;
+    height: auto;
+    position: absolute;
+    top: calc(100% - 90%);
+    left: calc(100% - 80%);
+}
+#business .image2 {
+    width: 30%;
+    height: auto;
+    position: absolute;
+    top: calc(100% - 40%);
+    left: calc(100% - 80%)
+}
+#business .image3 {
+    width: 30%;
+    height: auto;
+    position: absolute;
+    top: calc(100% - 95%);
+    right: calc(100% - 85%);
+}
+#business .image4 {
+    width: 30%;
+    height: auto;
+    position: absolute;
+    top: calc(100% - 45%);
+    right: calc(100% - 85%);
+}
+
+@media screen and (max-width: 900px) {
+    /*-------------------------------------------
+    business　image等のポジションを通常に戻し、縦並びに変更
+    -------------------------------------------*/
+    #business .parent{
+        flex-direction: column;
+        width: 100vw;
+        height: auto;
+        
+    }
+    #business .main {
+        margin-left: 3%;
+    }
+    #business img {
+        width: 100%;
+        justify-content: center; 
+    }
+    #business .image1 {
+        position: static;
+        margin-right: 2%;
+        margin-left: 2%;
+        width: 96%;
+        height: auto;
+        top: 0;
+        left: 0;
+    }
+    #business .image2 {
+        position: static;
+        margin-right: 2%;
+        margin-left: 2%;
+        width: 96%;
+        height: auto;
+        left: 0;
+    }
+    #business .image3 {
+        position: static;
+        margin-right: 2%;
+        margin-left: 2%;
+        width: 96%;
+        height: auto;
+        left: 0;
+    }
+    #business .image4 {
+        position: static;
+        margin-right: 2%;
+        margin-left: 2%;
+        width: 96%;
+        height: auto;
+        left: 0;
+    }
+}
+/* business end*/
+
+/* company start*/
+#company .line {
+    text-decoration: underline 2px;
+    margin-bottom: 5%
+}
+#company .main h1 {
+    margin-bottom: 0px;
+    font-size: 44px;
+    font-weight: 20;
+    letter-spacing: 0.3em;
+}
+#company .main p{
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+#company .detail p{
+    line-height: 0;
+    margin: 0;
+    
+}
+
+#company .block {
+    position: absolute;
+    width: 50%;
+    height: 90%;
+    background-color: white;
+    left: 10%;
+}
+#company .text {
+    margin-left: 10%;
+    margin-right: 20%;
+}
+#company .parent {
+    margin-top: 10%;
+    position: relative;
+    width: 100%;
+    height: 700px;
+    /* background-color: aqua; */
+    
+}
+
+#company img {
+    position: absolute;
+    width: 45%;
+    height: auto;
+    right: 5%;
+    top: 15%;
+}
+
+@media screen and (max-width: 900px) {
+    /*-------------------------------------------
+    company　image等のポジションを通常に戻し、縦並びに変更
+    -------------------------------------------*/
+    #company .parent {
+        position: static;
+        display: inline-block;
+        flex-direction: column;
+    }
+    #company img {
+        margin-top: 3%;
+        position: static;
+        margin-right: 2%;
+        margin-left: 2%;
+        width: 96%;
+        height: auto;
+        top: 0;
+        right: 0;
+    }
+    #company .block {
+        position: static;
+        width: 100%;
+        left: 0;
+    }  
+}
+/* company end*/
+
+/* footer start*/
+#footer {
+    background-color: white;
+    padding-bottom: 1%;
+}
+#footer .wed {
+    margin-left: 10%;
+}
+#footer .wed h2 {
+    margin-bottom: 0px;
+    font-size: 44px;
+    font-weight: 20;
+    letter-spacing: 0.3em;
+}
+#footer .inc {
+    margin-left: 10%;
+}
+#footer .contnts {
+    display: flex;
+    
+    justify-content: space-between;
+}
+#footer .list {
+    margin-top: 3%;
+    margin-right: 3%;
+    text-align: right;
+}
+#footer .inc {
+    margin-bottom: 5%;
+}
+@media screen and (max-width: 900px) {
+    /*-------------------------------------------
+    footer
+    -------------------------------------------*/
+    #footer .contnts {
+        flex-direction: column;
+    }
+    #footer .list {
+        text-align: unset;
+        margin-left: 10%;
+    }
+}
+/* footer end*/

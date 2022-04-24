@@ -1,0 +1,28 @@
+@charset "UTf-8";
+
+html {
+    /* フォントサイズを１００％に設定しておくことでユーザがブラウザで指定したフォントサイズが正しく反映される */
+    font-size: 100%;
+}
+
+body {
+    width: 100%;
+}
+li {
+    list-style: none;
+}
+
+img {
+    /* 画像が画面の横幅からはみ出るのを防ぐためにmaxサイズを設定 */
+    max-width: 100%;
+    
+}.wrapper {
+    max-width: 100%;
+    
+}
+header {  
+    display: flex;
+}
+
+
+
