@@ -1,0 +1,27 @@
+@charset "UTf-8";
+
+html {
+    /* フォントサイズを１００％に設定しておくことでユーザがブラウザで指定したフォントサイズが正しく反映される */
+    font-size: 100%;
+    width: 100vw;
+    
+}
+
+body {
+    width: 100vw;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+li {
+    list-style: none;
+}
+
+img {
+    /* 画像が画面の横幅からはみ出るのを防ぐためにmaxサイズを設定 */
+    max-width: 100%;
+    
+}
+h2:before{
+    font-family: "Font Awesome 5 Free";
+    content: '\f5d1';
+}

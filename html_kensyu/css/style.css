@@ -1,0 +1,22 @@
+.drop {
+    display: flex;
+    height: 2rem;
+}
+.drop li {
+    list-style: none;
+    
+}
+.drop > li {
+    width: 25%;
+    background-color: aqua;
+}
+
+.drop li li{
+    height: 0;
+    overflow: hidden;
+}
+
+.drop li:hover > ul > li {
+    height: 2rem;
+    overflow: visible;
+}
